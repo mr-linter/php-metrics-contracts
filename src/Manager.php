@@ -3,7 +3,9 @@
 namespace MrLinter\Contracts\Metrics;
 
 /**
- * Interface
+ * Interface for metrics managers.
+ *
+ * @phpstan-type Labels = array<string, string>
  */
 interface Manager extends Collector
 {
@@ -17,7 +19,7 @@ interface Manager extends Collector
     /**
      * Flush metrics to persistent storage.
      *
-     * @param array<string, string> $labels - additional labels for each metrics.
+     * @param Labels $labels - additional labels for each metrics.
      */
     public function flush(string $transactionId, array $labels = []): void;
 }
