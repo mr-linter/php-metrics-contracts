@@ -4,6 +4,8 @@ namespace MrLinter\Contracts\Metrics;
 
 /**
  * Interface for metrics collectors.
+ *
+ * @phpstan-type Labels = array<string, string>
  */
 interface Collector
 {

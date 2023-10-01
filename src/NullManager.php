@@ -5,7 +5,7 @@ namespace MrLinter\Contracts\Metrics;
 /**
  * Null object for Manager, Reader contracts
  */
-final class NullManager implements Manager, Reader
+final class NullManager implements Manager
 {
     public function inc(string $key, float $value = 1, array $labels = []): void
     {
