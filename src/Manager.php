@@ -5,7 +5,7 @@ namespace MrLinter\Contracts\Metrics;
 /**
  * Interface for metrics managers.
  */
-interface Manager extends Registry
+interface Manager
 {
     /**
      * Read metrics.
