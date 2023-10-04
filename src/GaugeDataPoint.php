@@ -2,15 +2,16 @@
 
 namespace MrLinter\Contracts\Metrics;
 
-class Subject
+class GaugeDataPoint
 {
     /**
      * @param non-empty-string $key
+     * @param array<string, string> $labels
      */
     public function __construct(
-        public readonly string $category,
         public readonly string $key,
-        public readonly string $title,
+        public readonly float $value,
+        public readonly array $labels,
     ) {
     }
 }

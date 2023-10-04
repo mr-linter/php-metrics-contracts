@@ -4,35 +4,16 @@ namespace MrLinter\Contracts\Metrics;
 
 /**
  * Interface for metrics collectors.
- *
- * @phpstan-type Labels = array<string, string>
  */
 interface Collector
 {
     /**
-     * Increment metric.
-     *
-     * @param array<string, string> $labels
-     *
-     * @throws MetricsException
+     * Get metric subject.
      */
-    public function inc(string $key, float $value = 1, array $labels = []): void;
+    public function subject(): Subject;
 
     /**
-     * Observe metric.
-     *
-     * @param array<string, string> $labels
-     *
-     * @throws MetricsException
+     * Collect metrics snapshot.
      */
-    public function observe(string $key, float $value, array $labels = []): void;
-
-    /**
-     * Set metric value.
-     *
-     * @param array<string, string> $labels
-     *
-     * @throws MetricsException
-     */
-    public function measure(string $key, float $value, array $labels = []): void;
+    public function collect(): Snapshot;
 }

@@ -2,12 +2,12 @@
 
 namespace MrLinter\Contracts\Metrics;
 
-readonly class Metric
+class Metric
 {
     public function __construct(
-        public string $category,
-        public string $name,
-        public string $value,
+        public readonly string $category,
+        public readonly string $title,
+        public readonly string $value,
     ) {
     }
 }
