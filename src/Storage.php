@@ -11,6 +11,8 @@ interface Storage
      * Flush metrics.
      *
      * @param iterable<Snapshot> $snapshots
+     *
+     * @throws FlushException
      */
     public function flush(Commit $commit, iterable $snapshots): void;
 }

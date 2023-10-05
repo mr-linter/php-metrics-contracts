@@ -11,6 +11,8 @@ interface Registry extends Registerer
      * Get collector by key.
      *
      * @param non-empty-string $key
+     *
+     * @throws CollectorNotFoundException
      */
     public function get(string $key): Collector;
 
