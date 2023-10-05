@@ -27,4 +27,11 @@ interface HistogramRecord
      * @return array<numeric-string, int>
      */
     public function group(): array;
+
+    /**
+     * Get metric labels.
+     *
+     * @return array<string, string>
+     */
+    public function labels(): array;
 }
