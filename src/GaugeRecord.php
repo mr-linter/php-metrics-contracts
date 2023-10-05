@@ -2,7 +2,7 @@
 
 namespace MrLinter\Contracts\Metrics;
 
-class GaugeDataPoint
+class GaugeRecord
 {
     /**
      * @param non-empty-string $key

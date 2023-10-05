@@ -2,7 +2,7 @@
 
 namespace MrLinter\Contracts\Metrics;
 
-class CounterDataPoint
+class CounterRecord
 {
     /**
      * @param non-empty-string $key

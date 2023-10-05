@@ -5,9 +5,9 @@ namespace MrLinter\Contracts\Metrics;
 readonly class Snapshot
 {
     /**
-     * @param array<CounterDataPoint> $counters
-     * @param array<GaugeDataPoint> $gauges
-     * @param array<HistogramDataPoint> $histograms
+     * @param array<CounterRecord> $counters
+     * @param array<GaugeRecord> $gauges
+     * @param array<HistogramRecord> $histograms
      */
     public function __construct(
         public array $counters,
