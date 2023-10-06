@@ -11,16 +11,10 @@ class CalculatedHistogramRecord implements HistogramRecord
      * @param array<string, string> $labels
      */
     public function __construct(
-        private readonly string $key,
         private readonly array $all,
         private readonly array $grouped,
         private readonly array $labels,
     ) {
-    }
-
-    public function key(): string
-    {
-        return $this->key;
     }
 
     public function all(): array
