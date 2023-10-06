@@ -8,13 +8,6 @@ namespace MrLinter\Contracts\Metrics;
 interface HistogramRecord
 {
     /**
-     * Get histogram key.
-     *
-     * @return non-empty-string
-     */
-    public function key(): string;
-
-    /**
      * Get all measurements.
      *
      * @return array<float>
