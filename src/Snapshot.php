@@ -10,6 +10,7 @@ readonly class Snapshot
      * @param array<HistogramRecord> $histograms
      */
     public function __construct(
+        public Subject $subject,
         public array $counters,
         public array $gauges,
         public array $histograms,
