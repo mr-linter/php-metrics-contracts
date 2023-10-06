@@ -3,9 +3,9 @@
 namespace MrLinter\Contracts\Metrics;
 
 /**
- * Interface for collector registry.
+ * Interface for collector manager.
  */
-interface Registry
+interface CollectorManager
 {
     /**
      * Register collector.
@@ -24,9 +24,9 @@ interface Registry
     public function get(string $key): Collector;
 
     /**
-     * Get all collectors.
+     * Flush metrics to persistent storage.
      *
-     * @return iterable<Collector>
+     * @throws FlushException
      */
-    public function all(): iterable;
+    public function flush(Storage $storage, Commit $commit): void;
 }
