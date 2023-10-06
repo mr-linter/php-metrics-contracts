@@ -8,13 +8,6 @@ namespace MrLinter\Contracts\Metrics;
 interface Manager
 {
     /**
-     * Read metrics.
-     *
-     * @return array<Metric>
-     */
-    public function read(): array;
-
-    /**
      * Flush metrics to persistent storage.
      *
      * @throws FlushException
