@@ -5,8 +5,15 @@ namespace MrLinter\Contracts\Metrics;
 /**
  * Interface for collector registry.
  */
-interface Registry extends Registerer
+interface Registry
 {
+    /**
+     * Register collector.
+     *
+     * @throws RegisterException
+     */
+    public function register(Collector $collector): void;
+
     /**
      * Get collector by key.
      *
