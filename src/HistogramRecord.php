@@ -10,16 +10,16 @@ interface HistogramRecord
     /**
      * Get all measurements.
      *
-     * @return array<float>
+     * @return NumberList
      */
-    public function all(): array;
+    public function all(): NumberList;
 
     /**
      * Get grouped measurements.
      *
      * @return array<numeric-string, int>
      */
-    public function group(): array;
+    public function frequencies(): array;
 
     /**
      * Get metric labels.
