@@ -32,7 +32,8 @@ final class CalculatedNumberList implements NumberList
     public function last(): ?float
     {
         $items = $this->items;
+        $last = end($items);
 
-        return end($items);
+        return $last === false ? null : $last;
     }
 }
