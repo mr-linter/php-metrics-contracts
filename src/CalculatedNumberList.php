@@ -28,4 +28,11 @@ final class CalculatedNumberList implements NumberList
     {
         return $this->sum;
     }
+
+    public function last(): ?float
+    {
+        $items = $this->items;
+
+        return end($items);
+    }
 }
