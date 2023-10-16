@@ -8,6 +8,11 @@ namespace MrLinter\Contracts\Metrics;
 interface HistogramRecord
 {
     /**
+     * Get metric key.
+     */
+    public function key(): string;
+
+    /**
      * Get all measurements.
      *
      * @return NumberList
